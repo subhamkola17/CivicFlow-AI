@@ -8949,3 +8949,385 @@ input {
     font-size: 14px;
   }
 }
+
+
+/* =========================================================
+   CIVICFLOW AI — MOBILE RESPONSIVE FIX
+   Fixes the desktop sidebar taking most of the phone screen.
+   Desktop/tablet styles above 899px remain unchanged.
+========================================================= */
+
+html,
+body,
+#root {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+.civic-app {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* The Sidebar is the first direct child of .civic-app.
+   On phones it becomes a compact top navigation bar. */
+@media (max-width: 899px) {
+  .civic-app {
+    display: block;
+  }
+
+  .civic-app > :first-child:not(.main) {
+    position: relative !important;
+    top: auto !important;
+    left: auto !important;
+    right: auto !important;
+    bottom: auto !important;
+
+    width: 100% !important;
+    min-width: 0 !important;
+    max-width: 100% !important;
+
+    height: auto !important;
+    min-height: 64px !important;
+    max-height: 76px !important;
+
+    margin: 0 !important;
+    padding: 0 12px !important;
+
+    box-sizing: border-box !important;
+    overflow: hidden !important;
+
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    gap: 8px !important;
+
+    flex: none !important;
+    z-index: 100 !important;
+  }
+
+  .civic-app > .main {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    margin: 0 !important;
+    padding: 18px 14px 28px !important;
+    box-sizing: border-box !important;
+    overflow-x: hidden !important;
+  }
+
+  .dashboard-header,
+  .service-centre,
+  .section-heading,
+  .card-heading {
+    min-width: 0;
+    max-width: 100%;
+  }
+
+  .dashboard-header {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 14px;
+  }
+
+  .dashboard-header > div {
+    min-width: 0;
+    max-width: 100%;
+  }
+
+  .dashboard-header h1 {
+    max-width: 100%;
+    font-size: clamp(28px, 8vw, 36px);
+    line-height: 1.08;
+    overflow-wrap: anywhere;
+  }
+
+  .dashboard-header p {
+    max-width: 100%;
+    font-size: 13px;
+    line-height: 1.55;
+  }
+
+  .premium-live-status {
+    align-self: flex-start;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+  .service-centre {
+    width: 100%;
+    box-sizing: border-box;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .service-centre > div {
+    min-width: 0;
+    max-width: 100%;
+  }
+
+  .service-centre h2 {
+    overflow-wrap: anywhere;
+  }
+
+  .metrics-grid,
+  .queue-grid,
+  .dashboard-two-column,
+  .cause-grid,
+  .scenario-grid,
+  .result-main,
+  .before-after-grid {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+  }
+
+  .metrics-grid,
+  .queue-grid {
+    grid-template-columns: minmax(0, 1fr) !important;
+  }
+
+  .dashboard-two-column {
+    grid-template-columns: minmax(0, 1fr) !important;
+  }
+
+  .metric-card,
+  .queue-card,
+  .card,
+  .forecast-card,
+  .bottleneck-card,
+  .root-cause-card,
+  .simulation-card,
+  .recommendation-card,
+  .monitoring-card {
+    min-width: 0 !important;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+  .queue-card-top,
+  .card-heading,
+  .section-heading {
+    min-width: 0;
+    max-width: 100%;
+  }
+
+  .queue-card h3,
+  .recommendation-main h3,
+  .card-heading h2,
+  .section-heading h2 {
+    overflow-wrap: anywhere;
+  }
+
+  .forecast-chart {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+  .forecast-summary {
+    flex-wrap: wrap;
+  }
+
+  .simulation-intro {
+    min-width: 0;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+  .simulation-intro > div {
+    min-width: 0 !important;
+    max-width: 100%;
+  }
+
+  .recommendation-content,
+  .monitoring-banner {
+    min-width: 0;
+    max-width: 100%;
+  }
+
+  .recommendation-main,
+  .recommendation-main p,
+  .monitoring-banner p {
+    min-width: 0;
+    max-width: 100%;
+    overflow-wrap: anywhere;
+  }
+
+  .recommendation-details {
+    grid-template-columns: minmax(0, 1fr) !important;
+  }
+
+  .recommendation-actions {
+    flex-wrap: wrap;
+  }
+
+  .recommendation-actions button {
+    min-width: 0;
+    flex: 1 1 120px;
+  }
+
+  .before-after-grid {
+    grid-template-columns: minmax(0, 1fr) !important;
+  }
+
+  .monitor-arrow {
+    transform: rotate(90deg);
+  }
+
+  /* Prevent long labels/values from creating horizontal overflow. */
+  .main * {
+    max-width: 100%;
+  }
+
+  .main img,
+  .main svg,
+  .main canvas {
+    max-width: 100%;
+  }
+
+  /* Workspace navigation: two comfortable columns on phones. */
+  .workspace-nav {
+    width: 100%;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 8px;
+  }
+
+  .workspace-nav-item {
+    min-width: 0;
+    min-height: 62px;
+    padding: 9px;
+  }
+
+  .workspace-nav-item > span:last-child {
+    min-width: 0;
+  }
+
+  .workspace-nav-item strong,
+  .workspace-nav-item small {
+    overflow-wrap: anywhere;
+  }
+
+  .workspace-nav-item strong {
+    font-size: 11px;
+  }
+
+  .workspace-nav-item small {
+    font-size: 9px;
+    white-space: normal;
+    line-height: 1.25;
+  }
+
+  /* Keep modal inside the phone viewport. */
+  .aq-modal {
+    width: calc(100% - 24px);
+    max-width: calc(100% - 24px);
+    margin: 12px;
+    padding: 22px 18px;
+    box-sizing: border-box;
+  }
+}
+
+/* Small phones */
+@media (max-width: 480px) {
+  .civic-app > :first-child:not(.main) {
+    min-height: 58px !important;
+    max-height: 68px !important;
+    padding: 0 8px !important;
+  }
+
+  .civic-app > .main {
+    padding: 14px 10px 24px !important;
+  }
+
+  .workspace-nav {
+    gap: 6px;
+  }
+
+  .workspace-nav-item {
+    min-height: 58px;
+    padding: 8px;
+    gap: 7px;
+  }
+
+  .workspace-nav-icon {
+    width: 25px;
+    height: 25px;
+    flex-basis: 25px;
+    flex-shrink: 0;
+  }
+
+  .workspace-nav-item strong {
+    font-size: 10px;
+  }
+
+  .workspace-nav-item small {
+    font-size: 8px;
+  }
+
+  .metric-card,
+  .queue-card,
+  .forecast-card,
+  .bottleneck-card,
+  .root-cause-card,
+  .simulation-card,
+  .recommendation-card,
+  .monitoring-card {
+    padding: 15px !important;
+  }
+
+  .dashboard-header h1 {
+    font-size: 29px;
+  }
+
+  .dashboard-header p {
+    font-size: 12px;
+  }
+
+  .service-centre h2 {
+    font-size: 17px;
+  }
+
+  .metric-value {
+    font-size: 30px;
+  }
+
+  .queue-number {
+    font-size: 27px;
+  }
+}
+
+/* Very small phones */
+@media (max-width: 360px) {
+  .civic-app > .main {
+    padding-left: 8px !important;
+    padding-right: 8px !important;
+  }
+
+  .workspace-nav-item {
+    gap: 5px;
+    padding: 7px;
+  }
+
+  .workspace-nav-item strong {
+    font-size: 9px;
+  }
+
+  .workspace-nav-item small {
+    font-size: 7px;
+  }
+
+  .dashboard-header h1 {
+    font-size: 27px;
+  }
+}
