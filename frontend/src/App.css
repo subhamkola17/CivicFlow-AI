@@ -9331,3 +9331,215 @@ body,
     font-size: 27px;
   }
 }
+
+
+/* =========================================================
+   CIVICFLOW AI — ANALYTICS ONLY READABILITY UPDATE
+   Only Analytics page typography is changed.
+   No layout, colors, spacing, or other pages are changed.
+========================================================= */
+
+/* Analytics summary cards */
+.analytics-page .analytics-stat-label {
+  font-size: 10px;
+  font-weight: 900;
+}
+
+.analytics-page .analytics-stat-card > strong {
+  font-size: 34px;
+  font-weight: 800;
+}
+
+.analytics-page .analytics-stat-card > strong small {
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.analytics-page .analytics-stat-card > small {
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.analytics-page .analytics-stat-change,
+.analytics-page .analytics-stat-warning {
+  font-size: 10px;
+  font-weight: 800;
+}
+
+/* Chart */
+.analytics-page .analytics-chart-legend {
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.analytics-page .analytics-y-axis {
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.analytics-page .analytics-bar span {
+  font-size: 10px;
+  font-weight: 800;
+}
+
+.analytics-page .analytics-bar-column small {
+  font-size: 9px;
+  font-weight: 700;
+}
+
+/* AI insight */
+.analytics-page .analytics-insight span {
+  font-size: 9px;
+  font-weight: 900;
+}
+
+.analytics-page .analytics-insight p {
+  font-size: 11px;
+  font-weight: 600;
+}
+
+/* Arrival / processing */
+.analytics-page .rate-top span {
+  font-size: 10px;
+  font-weight: 900;
+}
+
+.analytics-page .rate-top strong {
+  font-size: 16px;
+  font-weight: 800;
+}
+
+.analytics-page .rate-item small {
+  font-size: 10px;
+  font-weight: 600;
+}
+
+.analytics-page .rate-warning strong {
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.analytics-page .rate-warning small {
+  font-size: 10px;
+  font-weight: 600;
+}
+
+/* Peak hours */
+.analytics-page .peak-row > span {
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.analytics-page .peak-row strong {
+  font-size: 11px;
+  font-weight: 800;
+}
+
+/* Counter utilization */
+.analytics-page .analytics-live-badge {
+  font-size: 9px;
+  font-weight: 900;
+}
+
+.analytics-page .counter-identity > span {
+  font-size: 10px;
+  font-weight: 900;
+}
+
+.analytics-page .counter-identity strong {
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.analytics-page .counter-identity small {
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.analytics-page .utilization-header span {
+  font-size: 9px;
+  font-weight: 900;
+}
+
+.analytics-page .utilization-header strong {
+  font-size: 10px;
+  font-weight: 800;
+}
+
+.analytics-page .counter-wait span {
+  font-size: 9px;
+  font-weight: 900;
+}
+
+.analytics-page .counter-wait strong {
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.analytics-page .counter-status {
+  font-size: 9px;
+  font-weight: 900;
+}
+
+/* Bottleneck analysis */
+.analytics-page .bottleneck-table-header {
+  font-size: 9px;
+  font-weight: 900;
+}
+
+.analytics-page .bottleneck-table-row {
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.analytics-page .bottleneck-table-row strong {
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.analytics-page .bottleneck-insight span {
+  font-size: 9px;
+  font-weight: 900;
+}
+
+.analytics-page .bottleneck-insight strong {
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.analytics-page .bottleneck-insight p {
+  font-size: 10px;
+  font-weight: 600;
+}
+
+/* Analytics footer */
+.analytics-page .analytics-footer {
+  font-size: 9px;
+  font-weight: 800;
+}
+
+/* Analytics mobile readability */
+@media (max-width: 700px) {
+  .analytics-page .analytics-stat-label {
+    font-size: 10px;
+  }
+
+  .analytics-page .analytics-stat-card > strong {
+    font-size: 33px;
+  }
+
+  .analytics-page .analytics-stat-card > small,
+  .analytics-page .analytics-stat-change,
+  .analytics-page .analytics-stat-warning {
+    font-size: 10px;
+  }
+
+  .analytics-page .analytics-insight p,
+  .analytics-page .bottleneck-insight p {
+    font-size: 10px;
+  }
+
+  .analytics-page .counter-analytics-row {
+    font-size: 10px;
+  }
+}
